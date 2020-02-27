@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ReportGenericService
 {
-    public class ReportServiceBase<TReport> : Grain, IReportGenericService<TReport> where TReport : ReportBase
+    public abstract class ReportServiceBase<TReport> : Grain, IReportGenericService<TReport> where TReport : ReportBase
     {
         public ReportServiceBase(IReportPersistence reportPersistence, ILogger logger)
         {
